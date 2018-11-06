@@ -3,28 +3,14 @@ import '../../styles/auth/authStyles.scss';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
-const SignupForm = ({ handleSubmit, handleChange, error }) => (
+const LoginForm = ({ handleSubmit, handleChange, error }) => (
 	<div className="row">
 		<div className="col s12 m6 offset-m3 l4 offset-l4">
 			<div className="card darken-1">
 				<div className="card-content white-text">
-					<span className="card-title black-text">Sign up</span>
+					<span className="card-title black-text">Login</span>
 					<div className="row">
 						<form className="col s12" id="reg-form" onSubmit={handleSubmit}>
-							<div className="row">
-								<div className="input-field col s12">
-									<input id="first_name" name="firstname" type="text" onChange={handleChange} />
-									<label htmlFor="first_name">First Name</label>
-									<div className="red-text">{error.firstnameError}</div>
-								</div>
-							</div>
-							<div className="row">
-								<div className="input-field col s12">
-									<input id="last_name" name="lastname" type="text" onChange={handleChange} />
-									<label htmlFor="last_name">Last Name</label>
-									<div className="red-text">{error.lastnameError}</div>
-								</div>
-							</div>
 							<div className="row">
 								<div className="input-field col s12">
 									<input id="user_name" name="username" type="text" onChange={handleChange} />
@@ -41,12 +27,12 @@ const SignupForm = ({ handleSubmit, handleChange, error }) => (
 							</div>
 							<div className="row">
 								<div className="input-field black-text col s6">
-									<span>Already have an account?</span>
+									<span> New user?</span>
 									<br />
-									<Link to="/"><span className="a_login blue-grey-text ">Login</span></Link>
+									<Link to="/signup"><span className="a_login blue-grey-text ">Register here.</span></Link>
 								</div>
 								<div className="input-field col s6">
-									<button className="btn btn-large btn-register waves-effect waves-light" type="submit" name="action">Signup</button>
+									<button className="btn btn-large btn-register waves-effect waves-light" type="submit" name="action">Login</button>
 								</div>
 							</div>
 						</form>
@@ -57,10 +43,10 @@ const SignupForm = ({ handleSubmit, handleChange, error }) => (
 	</div>
 );
 
-SignupForm.propTypes = {
+LoginForm.propTypes = {
 	handleChange: PropTypes.func.isRequired,
 	handleSubmit: PropTypes.func.isRequired,
 	error: PropTypes.object.isRequired
 };
 
-export default SignupForm;
+export default LoginForm;
