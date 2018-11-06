@@ -1,17 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import SignupForm from '../../components/auth/signup';
-import signupAction from '../../actions/auth/signupAction';
+import LoginForm from '../../components/auth/login';
+import loginAction from '../../actions/auth/loginAction';
 
-class SignupPage extends React.Component {
+class LoginPage extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			firstname: '',
-			firstnameError: '',
-			lastname: '',
-			lastnameError: '',
 			username: '',
 			usernameError: '',
 			password: '',
@@ -23,34 +19,19 @@ class SignupPage extends React.Component {
 
 	validateUserData = () => {
 		this.setState({
-			firstnameError: '',
-			lastnameError: '',
 			usernameError: '',
 			passwordError: ''
 		});
-		const {
-			firstname, lastname, username, password
-		} = this.state;
+		const { username, password } = this.state;
 
 		let isValid = true;
 
-		if (firstname.length === 0) {
-			this.setState({ firstnameError: 'First name is required' });
-			isValid = false;
-		}
-		if (lastname.length === 0) {
-			this.setState({ lastnameError: 'Last name is required' });
-			isValid = false;
-		}
 		if (username.length === 0) {
 			this.setState({ usernameError: 'Username is required' });
 			isValid = false;
 		}
 		if (password.length === 0) {
 			this.setState({ passwordError: 'Password is required' });
-			isValid = false;
-		} else if (password.length < 5) {
-			this.setState({ passwordError: 'Password must have atleast 5 characters' });
 			isValid = false;
 		}
 		return isValid;
@@ -64,19 +45,17 @@ class SignupPage extends React.Component {
 	    e.preventDefault();
 	    if (this.validateUserData()) {
 	    	const userData = {
-				username: this.state.username,
-			    lastname: this.state.lastname,
-			    firstname: this.state.firstname,
+			    username: this.state.username,
 			    password: this.state.password
 			};
-	    	this.props.dispatch(signupAction(userData));
+	    	this.props.dispatch(loginAction(userData));
 	    }
 	};
 
 	render() {
 		return (
 			<div>
-				<SignupForm
+				<LoginForm
 					handleSubmit={this.handleSubmit}
 					handleChange={this.handleChange}
 					error={this.state}
@@ -85,10 +64,10 @@ class SignupPage extends React.Component {
 		);
 	}
 }
-SignupPage.propTypes = {
+LoginPage.propTypes = {
 	dispatch: PropTypes.func.isRequired
 };
 const mapDispatchToProps = dispatch => ({ dispatch });
 
-export default connect(mapDispatchToProps)(SignupPage);
+export default connect(mapDispatchToProps)(LoginPage);
 
