@@ -143,6 +143,7 @@
         "every": [ "htmlFor"]
       }
     }],
-    "jsx-a11y/label-has-for": "off"
+    "jsx-a11y/label-has-for": "off",
+    "no-tabs": "off"
   }
 }

@@ -1,0 +1,32 @@
+body {
+  background: rgba(0, 0, 0, 0.5);
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://unsplash.it/1200/800/?image=1077');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-fill-mode: rgba(0,0,0,0.5);
+  margin-top: 20px;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.container {
+  background: white;
+  padding: 20px 25px;
+  border: 1px solid #26a69a;
+  width: 500px;
+  height: auto;
+  box-sizing: border-box;
+  position: relative;
+}
+.col.s6 > .btn {
+   width: 100%;
+  background:gray;
+}
+
+.row {margin-bottom: 10px;}
+
+
+.signup{
+  font-size: 1.5em;
+}
