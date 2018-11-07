@@ -1,18 +1,15 @@
 import axios from 'axios';
 import M from 'materialize-css';
-import { API_URLS, AUTH_TOKEN } from '../../constants';
+import { API_URLS } from '../../constants';
 import loadingAction from '../loader/loaderAction';
+import { addToken } from '../../utils';
 
-const loginAction = (user, history) => (dispatch) => {
+const createRidesAction = rideData => (dispatch) => {
 	dispatch(loadingAction(true));
-	axios.post(API_URLS.LOGIN_URL, user).then((response) => {
-		if (response.status === 200) {
-			const token = response.data.access_token ? response.data.access_token : null;
-			localStorage.setItem(AUTH_TOKEN, token);
-		}
+	addToken();
+	axios.post(API_URLS.CREATE_RIDE_URL, rideData).then((response) => {
 		M.toast({ html: `${response.data.message}`, classes: 'green darken-2' });
 		dispatch(loadingAction(false));
-		history.push('/newRide');
 
 	}).catch((error) => {
 		M.toast({ html: `${error.response.data.message}`, classes: 'red darken-2' });
@@ -20,5 +17,5 @@ const loginAction = (user, history) => (dispatch) => {
 	});
 
 };
-export default loginAction;
+export default createRidesAction;
 

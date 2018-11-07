@@ -18,10 +18,6 @@ class LoginPage extends React.Component {
 	}
 
 	validateUserData = () => {
-		this.setState({
-			usernameError: '',
-			passwordError: ''
-		});
 		const { username, password } = this.state;
 
 		let isValid = true;

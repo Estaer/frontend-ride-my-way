@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import '../../styles/nav.scss';
 
 const NavBar = () => (
@@ -7,10 +8,10 @@ const NavBar = () => (
 			<div className="nav-wrapper">
 				<a href="#!" className="brand-logo left hide-on-small-only">
 					<i className="material-icons">directions_car</i>
-					Ride My Way
+					<span>Ride My Way</span>
 				</a>
 				<ul className="right">
-					<li><a href="sass.html">Offer Ride</a></li>
+					<li><Link to="/newRide">Offer Ride</Link></li>
 					<li><a href="badges.html">Request Ride</a></li>
 					<li><a href="sass.html">View Requests</a></li>
 					<li><a href="sass.html">Logout</a></li>
