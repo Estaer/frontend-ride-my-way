@@ -69,7 +69,7 @@ class SignupPage extends React.Component {
 			    firstname: this.state.firstname,
 			    password: this.state.password
 			};
-	    	this.props.dispatch(signupAction(userData));
+	    	this.props.dispatch(signupAction(userData, this.props.history));
 	    }
 	};
 
@@ -86,7 +86,8 @@ class SignupPage extends React.Component {
 	}
 }
 SignupPage.propTypes = {
-	dispatch: PropTypes.func.isRequired
+	dispatch: PropTypes.func.isRequired,
+	history: PropTypes.func.isRequired
 };
 const mapDispatchToProps = dispatch => ({ dispatch });
 

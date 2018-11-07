@@ -3,9 +3,9 @@ import React from 'react';
 import { connect } from 'react-redux';
 import '../../styles/loader/loader.scss';
 
-const Loader = props => (
+const Loader = ({ isLoading }) => (
 
-	props.isLoading ?
+	isLoading ?
 		(
 			<div className="preloader-wrapper big active">
 				<div className="spinner-layer spinner-green-only darken-4">
@@ -20,7 +20,7 @@ const Loader = props => (
 					</div>
 				</div>
 			</div>
-		) : ('')
+		) : null
 
 );
 

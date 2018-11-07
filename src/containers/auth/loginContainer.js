@@ -48,7 +48,7 @@ class LoginPage extends React.Component {
 			    username: this.state.username,
 			    password: this.state.password
 			};
-	    	this.props.dispatch(loginAction(userData));
+	    	this.props.dispatch(loginAction(userData, this.props.history));
 	    }
 	};
 
@@ -65,7 +65,8 @@ class LoginPage extends React.Component {
 	}
 }
 LoginPage.propTypes = {
-	dispatch: PropTypes.func.isRequired
+	dispatch: PropTypes.func.isRequired,
+	history: PropTypes.func.isRequired
 };
 const mapDispatchToProps = dispatch => ({ dispatch });
 
