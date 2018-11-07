@@ -22,12 +22,6 @@ class SignupPage extends React.Component {
 	}
 
 	validateUserData = () => {
-		this.setState({
-			firstnameError: '',
-			lastnameError: '',
-			usernameError: '',
-			passwordError: ''
-		});
 		const {
 			firstname, lastname, username, password
 		} = this.state;
