@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 const SignupForm = ({ handleSubmit, handleChange, error }) => (
 	<div className="row">
 		<div className="col s12 m6 offset-m3 l4 offset-l4">
+			<div className="title white-text center"><i className="material-icons">directions_car</i>RIDE MY WAY</div>
 			<div className="card darken-1">
 				<div className="card-content white-text">
 					<span className="card-title black-text">Sign up</span>
