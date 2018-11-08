@@ -5,6 +5,8 @@ import loadingReducer from './loader/loaderReducer';
 import createRideReducer from './rides/createRidesReducer';
 import viewRidesReducer from './rides/viewRideReducer';
 import requestRidesReducer from './rides/requestRidesReducer';
+import myRidesReducer from './rides/myRidesReducer';
+import viewRequestsReducer from './rides/viewRequestReducer';
 
 const reducers = combineReducers({
 	signupReducer,
@@ -12,7 +14,9 @@ const reducers = combineReducers({
 	loadingReducer,
 	createRideReducer,
 	viewRidesReducer,
-	requestRidesReducer
+	requestRidesReducer,
+	myRidesReducer,
+	viewRequestsReducer
 });
 
 export default reducers;

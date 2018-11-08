@@ -4,6 +4,8 @@ import SignupPage from './containers/auth/signupContainer';
 import LoginPage from './containers/auth/loginContainer';
 import RideOffer from './containers/rides/createRidesContainer';
 import ViewRideOffer from './containers/rides/viewRidesContainer';
+import MyRideOffers from './containers/rides/myRidesContainer';
+import MyRequests from './containers/rides/viewRequestsContainer';
 
 const Routes = () => (
 	<Router>
@@ -12,6 +14,8 @@ const Routes = () => (
 			<Route path="/" component={LoginPage} exact />
 			<Route path="/newRide" component={RideOffer} exact />
 			<Route path="/rideOffers" component={ViewRideOffer} exact />
+			<Route path="/myRides" component={MyRideOffers} exact />
+			<Route path="/requests" component={MyRequests} exact />
 		</Switch>
 	</Router>
 );
