@@ -21,7 +21,7 @@ const Ride = ({ handleSubmit, handleChange, error }) => (
 								<div className="row">
 									<div className="input-field col s12">
 										<input placeholder="dd-mm-yy hh:mm" id="departure" name="departure" type="text" onChange={handleChange} />
-										<label htmlFor="departure">We set off on...</label>
+										<label htmlFor="departure" className="active">We set off on...</label>
 										<div className="red-text">{error.departureError}</div>
 									</div>
 								</div>

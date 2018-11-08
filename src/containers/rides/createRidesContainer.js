@@ -60,7 +60,7 @@ class RideOffer extends React.Component {
 			} = this.state;
 	    	this.props.dispatch(createRidesAction({
 				meetingpoint, departure, destination, slots 
-			}));
+			}, this.props.history));
 	    }
 	};
 

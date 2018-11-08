@@ -15,13 +15,14 @@ export const requestRidesFail = errors => ({
 	payload: errors
 });
 
-const requestRidesAction = (ride_id) => (dispatch) => {
+const requestRidesAction = (ride_id, history) => (dispatch) => {
 	dispatch(loadingAction(true));
 	addToken();
 	axios.post(`${BASE_URL}rides/${ride_id}/requests`).then((response) => {
 		dispatch(loadingAction(false));
 		dispatch(requestRidesSuccess(response.data.message));
 		M.toast({ html: `${response.data.message}`, classes: 'green darken-2' });
+		history.push('/myRides');
 
 	}).catch((error) => {
 		dispatch(loadingAction(false));

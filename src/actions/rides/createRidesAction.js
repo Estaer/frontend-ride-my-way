@@ -4,12 +4,13 @@ import { API_URLS } from '../../constants';
 import loadingAction from '../loader/loaderAction';
 import { addToken } from '../../utils';
 
-const createRidesAction = rideData => (dispatch) => {
+const createRidesAction = (rideData, history) => (dispatch) => {
 	dispatch(loadingAction(true));
 	addToken();
 	axios.post(API_URLS.CREATE_RIDE_URL, rideData).then((response) => {
 		M.toast({ html: `${response.data.message}`, classes: 'green darken-2' });
 		dispatch(loadingAction(false));
+		history.push('/rideOffers');
 
 	}).catch((error) => {
 		M.toast({ html: `${error.response.data.message}`, classes: 'red darken-2' });
