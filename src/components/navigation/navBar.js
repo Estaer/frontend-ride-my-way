@@ -8,7 +8,7 @@ const NavBar = () => (
 			<div className="nav-wrapper">
 				<a href="#!" className="brand-logo left hide-on-small-only">
 					<i className="material-icons">directions_car</i>
-					<Link to="/"><span>Ride My Way</span></Link>
+					<span>Ride My Way</span>
 				</a>
 				<ul className="right">
 					<li><Link to="/newRide">Offer Ride</Link></li>
