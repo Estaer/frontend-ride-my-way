@@ -12,7 +12,7 @@ const NavBar = () => (
 				</a>
 				<ul className="right">
 					<li><Link to="/newRide">Offer Ride</Link></li>
-					<li><a href="badges.html">Request Ride</a></li>
+					<li><Link to="/rideOffers">Request Ride</Link></li>
 					<li><a href="sass.html">View Requests</a></li>
 					<li><a href="sass.html">Logout</a></li>
 				</ul>
