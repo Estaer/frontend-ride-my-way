@@ -60,10 +60,7 @@ class LoginPage extends React.Component {
 		);
 	}
 }
-LoginPage.propTypes = {
-	dispatch: PropTypes.func.isRequired,
-	history: PropTypes.func.isRequired
-};
+LoginPage.propTypes = { dispatch: PropTypes.func.isRequired };
 const mapDispatchToProps = dispatch => ({ dispatch });
 
 export default connect(mapDispatchToProps)(LoginPage);
