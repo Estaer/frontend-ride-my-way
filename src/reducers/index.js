@@ -7,6 +7,7 @@ import viewRidesReducer from './rides/viewRideReducer';
 import requestRidesReducer from './rides/requestRidesReducer';
 import myRidesReducer from './rides/myRidesReducer';
 import viewRequestsReducer from './rides/viewRequestReducer';
+import statusReducer from './rides/statusReducer';
 
 const reducers = combineReducers({
 	signupReducer,
@@ -16,7 +17,8 @@ const reducers = combineReducers({
 	viewRidesReducer,
 	requestRidesReducer,
 	myRidesReducer,
-	viewRequestsReducer
+	viewRequestsReducer,
+	statusReducer
 });
 
 export default reducers;

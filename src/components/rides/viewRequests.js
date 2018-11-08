@@ -1,7 +1,7 @@
 import React from 'react';
 import '../../styles/rides/rideForm.scss';
 
-const ViewRideRequests = ({ requestData }) => (
+const ViewRideRequests = ({ requestData, handleClick }) => (
 	<div className="card ol s12 m6 offset-m3 l4 offset-l4 darken-1">
 		<div className="card-content">
 			<span className="card-title black-text center">Requests to this ride offer</span>
@@ -17,7 +17,7 @@ const ViewRideRequests = ({ requestData }) => (
 				<tbody>
 					{
 						requestData.map(requests => (
-							<tr key={requests.ride_id}>
+							<tr key={requests.request_id}>
 								<td>{requests.request_id}</td>
 								<td>{requests.name}</td>
 								<td>{requests.status}</td>
@@ -26,6 +26,7 @@ const ViewRideRequests = ({ requestData }) => (
 										className="btn btn-small btn-register waves-effect green darken-3"
 										type="submit"
 										name="action"
+										onClick={() => handleClick(requests.ride_id, requests.request_id, 'accepted')}
 									>Accept
 									</button>
 								</td>
@@ -34,7 +35,8 @@ const ViewRideRequests = ({ requestData }) => (
 										className="btn btn-small btn-register waves-effect red darken-1"
 										type="submit"
 										name="action"
-									>Decline
+										onClick={() => handleClick(requests.ride_id, requests.request_id, 'rejected')}
+									>Reject
 									</button>
 								</td>
 							</tr>
