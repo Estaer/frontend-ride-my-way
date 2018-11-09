@@ -12,6 +12,7 @@ describe('Create ride form', () => {
 	};
 
 	let mountedRideForm;
+
 	const func = jest.fn;
 	beforeEach(() => {
 		mountedRideForm = shallow(<Ride
