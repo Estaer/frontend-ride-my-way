@@ -4,7 +4,7 @@ import '../../styles/rides/rideForm.scss';
 
 const Ride = ({ handleSubmit, handleChange, error }) => (
 	<div className="rideForm">
-		<div className="row">
+		<div className="create row">
 			<div className="col s12 m6 offset-m3 l4 offset-l4">
 				<div className="card darken-1">
 					<div className="card-content white-text">

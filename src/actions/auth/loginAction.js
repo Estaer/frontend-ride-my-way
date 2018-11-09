@@ -24,7 +24,7 @@ const loginAction = (user, history) => (dispatch) => {
 		dispatch(loadingAction(false));
 		dispatch(loginSuccess(response.data.message));
 		M.toast({ html: `${response.data.message}`, classes: 'green darken-2' });
-		history.push('/newRide');
+		history.push('/rideOffers');
 
 	}).catch((error) => {
 		dispatch(loadingAction(false));
