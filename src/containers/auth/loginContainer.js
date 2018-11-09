@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import LoginForm from '../../components/auth/login';
 import loginAction from '../../actions/auth/loginAction';
 
-class LoginPage extends React.Component {
+export class LoginPage extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
