@@ -80,8 +80,7 @@ class SignupPage extends React.Component {
 	}
 }
 SignupPage.propTypes = {
-	dispatch: PropTypes.func.isRequired,
-	history: PropTypes.func.isRequired
+	dispatch: PropTypes.func.isRequired
 };
 const mapDispatchToProps = dispatch => ({ dispatch });
 

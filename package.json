@@ -8,6 +8,7 @@
     "enzyme-adapter-react-16": "^1.6.0",
     "eslint-config-airbnb": "^17.1.0",
     "materialize-css": "^1.0.0",
+    "moxios": "^0.4.0",
     "node-sass": "^4.10.0",
     "prop-types": "^15.6.2",
     "react": "^16.6.0",
@@ -26,6 +27,17 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx}",
+      "!/build",
+      "!/node_modules/",
+      "!src/index.js",
+      "!src/App.js",
+      "!src/reducers/index.js",
+      "!src/store/index.js"
+    ]
   },
   "eslintConfig": {
     "extends": "react-app"

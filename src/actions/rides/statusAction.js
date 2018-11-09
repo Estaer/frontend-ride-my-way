@@ -19,7 +19,7 @@ export const changeStatusFail = errors => ({
 const statusAction = (rideId, requestId, status) => (dispatch) => {
 	dispatch(loadingAction(true));
 	addToken();
-	axios.put(`${BASE_URL}users/rides/${rideId}/requests/${requestId}`, status).then((response) => {
+	return axios.put(`${BASE_URL}users/rides/${rideId}/requests/${requestId}`, status).then((response) => {
 		dispatch(loadingAction(false));
 		dispatch(changeStatusSuccess(response.data.message));
 		dispatch(viewRequestsAction(rideId));

@@ -18,7 +18,7 @@ export const viewRequestsFail = errors => ({
 const viewRequestsAction = rideId => (dispatch) => {
 	dispatch(loadingAction(true));
 	addToken();
-	axios.get(`${BASE_URL}users/rides/${rideId}/requests`).then((response) => {
+	return axios.get(`${BASE_URL}users/rides/${rideId}/requests`).then((response) => {
 
 		dispatch(loadingAction(false));
 		dispatch(viewRequestsSuccess(response.data.requests));

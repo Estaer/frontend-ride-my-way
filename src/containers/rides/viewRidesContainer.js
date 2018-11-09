@@ -13,7 +13,7 @@ class ViewRideOffer extends React.Component {
 	}
 
 	handleClick = (ride_id) => {
-		this.props.dispatch(requestRidesAction(ride_id));
+		this.props.dispatch(requestRidesAction(ride_id, this.props.history));
 
 	};
 
