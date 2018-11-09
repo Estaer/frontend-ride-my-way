@@ -5,7 +5,7 @@ import Ride from '../../components/rides/createRides';
 import Navigation from '../navigation/navContainer';
 import createRidesAction from '../../actions/rides/createRidesAction';
 
-class RideOffer extends React.Component {
+export class RideOffer extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
