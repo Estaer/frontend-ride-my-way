@@ -39,7 +39,7 @@ To run the tests, make sure you are working under test/, Then run either of the 
 * Materialize CSS
 
 ## Link to heroku app
-`https://frontend-ride-my-way.herokuapp.com/newRide`
+https://frontend-ride-my-way.herokuapp.com/newRide
 
 ## Authors
 
