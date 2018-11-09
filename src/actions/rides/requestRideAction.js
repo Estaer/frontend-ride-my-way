@@ -18,15 +18,19 @@ export const requestRidesFail = errors => ({
 const requestRidesAction = (ride_id, history) => (dispatch) => {
 	dispatch(loadingAction(true));
 	addToken();
-	axios.post(`${BASE_URL}rides/${ride_id}/requests`).then((response) => {
+	return axios.post(`${BASE_URL}rides/${ride_id}/requests`).then((response) => {
 		dispatch(loadingAction(false));
+		console.log('-----', response);
 		dispatch(requestRidesSuccess(response.data.message));
+		console.log('-----', response);
 		M.toast({ html: `${response.data.message}`, classes: 'green darken-2' });
+		console.log('-----', response);
 		history.push('/myRides');
 
 	}).catch((error) => {
 		dispatch(loadingAction(false));
 		dispatch(requestRidesFail(error));
+		console.log('---error---', error);
 		M.toast({ html: `${error.response.data.message}`, classes: 'red darken-2' });
 	});
 

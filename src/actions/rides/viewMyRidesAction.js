@@ -18,7 +18,7 @@ export const viewMyRidesFail = errors => ({
 const viewMyRidesAction = rides => (dispatch) => {
 	dispatch(loadingAction(true));
 	addToken();
-	axios.get(API_URLS.MY_RIDES_URL, rides).then((response) => {
+	return axios.get(API_URLS.MY_RIDES_URL, rides).then((response) => {
 
 		dispatch(loadingAction(false));
 		dispatch(viewMyRidesSuccess(response.data.ride_offers));
