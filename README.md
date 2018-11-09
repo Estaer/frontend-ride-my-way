@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/Estaer/frontend-ride-my-way.svg?branch=develop)](https://travis-ci.org/Estaer/frontend-ride-my-way)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/c36d40d918375021b432/test_coverage)](https://codeclimate.com/github/Estaer/frontend-ride-my-way/test_coverage)
 # RIDE MY WAY
 Ride my way App is a carpooling application that provides drivers with the ability to create ride offers
 and passengers to join available ride offers.
@@ -34,6 +36,10 @@ To run the tests, make sure you are working under test/, Then run either of the 
 * Flask - Python web based framework
 * Python - Framework language
 * React-Redux
+* Materialize CSS
+
+## Link to heroku app
+`https://frontend-ride-my-way.herokuapp.com/newRide`
 
 ## Authors
 
