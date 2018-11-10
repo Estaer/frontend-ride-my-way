@@ -10,41 +10,41 @@ and passengers to join available ride offers.
 ### Prerequisites
 ```
 - git : To be used for version control
-- python3: The base language used to develop the api endpoints
-- pip: A python package used to install the necessary libraries and dependencies
-- postman: For testing the api endpoints
+- npm: Package manager for javaScript
 ```
 
-### Installing
+Run `git clone https://github.com/Estaer/frontend-ride-my-way.git` in your terminal.
 
-Type "git clone https://github.com/Estaer/frontend-ride-my-way.git" in your terminal.
+Install the dependencies by running `npm install`
 
-To install the requirements. run:
-`npm install`
+### Starting the application
+Run `npm start` on your terminal to start the application on your local machine.
 
-The following commands are then used to run the app.
->`npm start`
+### Running the tests
+Use the command below to run the tests.
+```
+npm test
+```
 
-## Running the tests
-Running the tests
-To run the tests, make sure you are working under test/, Then run either of the following commands
->`npm test`
+To get the test coverage, run:
+```
+npm test -- --coverage
+```
+
+## Follow the link below test the working application.
+```
+https://frontend-ride-my-way.herokuapp.com/
+```
+
+## Features
+* Authentication - Signup and Login
+* Creating a ride offer
+* Viewing details of available offers
+* Making requests to ride offers
+* View rides offered by you
+*Accepting or rejecting ride requests
 
 
 ## Built With
-
-* Flask - Python web based framework
-* Python - Framework language
 * React-Redux
 * Materialize CSS
-
-## Link to heroku app
-https://frontend-ride-my-way.herokuapp.com/newRide
-
-## Authors
-
-* **Nammanda Esther** - *Initial work* - https://github.com/Estaer
-
-## Acknowledgments
-
-* Andela 
